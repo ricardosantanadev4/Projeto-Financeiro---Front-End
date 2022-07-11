@@ -1,0 +1,221 @@
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <!-- <i class="nc-icon nc-globe text-warning"></i> -->
+              <i class="nc-icon nc-money-coins text-success"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Entrada</p>
+              <p class="card-title">$ 500
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh"></i> 20/01/2022
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-money-coins text-danger"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Saída</p>
+              <p class="card-title">$ 250
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-calendar-o"></i> 20/01/2022
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-money-coins text-secondary"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Investimentos</p>
+              <p class="card-title">23
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-clock-o"></i> 20/01/2022
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-money-coins text-primary"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">Contas</p>
+              <p class="card-title">5
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh"></i> 20/01/2022
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <!-- <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Users Behavior</h5>
+        <p class="card-category">24 Hours performance</p>
+      </div>
+      <div class="card-body ">
+        <canvas id=chartHours width="400" height="100"></canvas>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title"> Movimentações</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Data
+              </th>
+              <th>
+                Nome
+              </th>
+              <th>
+                Tipo
+              </th>
+              <th>
+                Conta
+              </th>
+              <th class="text-right">
+                Valor
+              </th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let table of tables">
+                <td>
+                  {{table.data}}
+                </td>
+                <td>
+                  {{table.name}}
+                </td>
+                <td>
+                  {{table.type}}
+                </td>
+                <td>
+                  conta
+                </td>
+                <td class="text-right">
+                 R${{table.value}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Estatística Geral</h5>
+        <p class="card-category"></p>
+      </div>
+      <div class="card-body ">
+        <canvas id="chartEmail"></canvas>
+      </div>
+      <div class="card-footer ">
+        <div class="legend">
+          <i class="fa fa-circle text-primary"></i> Entrada
+          <i class="fa fa-circle text-warning"></i> Saída
+          <i class="fa fa-circle text-danger"></i> Investimentos
+          <i class="fa fa-circle text-gray"></i> Outros
+        </div>
+        <hr>
+        <div class="stats">
+          <i class="fa fa-calendar"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-title">Movimentações Anuais</h5>
+        <p class="card-category">Entradas X Saídas</p>
+      </div>
+      <div class="card-body">
+        <canvas id="speedChart" width="400" height="100"></canvas>
+      </div>
+      <div class="card-footer">
+        <div class="chart-legend">
+          <i class="fa fa-circle text-info"></i> Entradas
+          <i class="fa fa-circle text-warning"></i> Saídas
+        </div>
+        <hr/>
+        <div class="card-stats">
+          <i class="fa fa-check"></i> Data information certified
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
