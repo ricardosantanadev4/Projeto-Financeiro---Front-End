@@ -149,21 +149,22 @@
               </th>
             </thead>
             <tbody>
-              <tr *ngFor="let table of tables">
+              <tr *ngFor="let obj of moviments">
                 <td>
-                  {{table.data}}
+                  {{obj.date}}
                 </td>
                 <td>
-                  {{table.name}}
+                  {{obj.name}}
                 </td>
                 <td>
-                  {{table.type}}
+                  {{obj.type}}
                 </td>
                 <td>
-                  conta
+                  <!-- e bom sempre colocar uma ? quando tiver um objeto dentro de outro objeto para nao quebrar o front -->
+                {{obj.account?.name}}
                 </td>
                 <td class="text-right">
-                 R${{table.value}}
+                R${{obj.value}}
                 </td>
               </tr>
             </tbody>

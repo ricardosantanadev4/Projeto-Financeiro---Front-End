@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Account } from 'app/models/Account';
 import { Moviment } from 'app/models/moviment';
 import Chart from 'chart.js';
 
@@ -17,9 +18,12 @@ export class DashboardComponent implements OnInit {
   public chartEmail;
   public chartHours;
 
-  tables: Moviment[] = [];
+  moviments: Moviment[] = [];
+  
 
   ngOnInit() {
+    this.GetMoviment();
+    
     this.chartColor = "#FFFFFF";
 
     this.canvas = document.getElementById("chartEmail");
@@ -132,17 +136,31 @@ export class DashboardComponent implements OnInit {
       options: chartOptions
     });
 
-    this.initTable();
   }
 
-  initTable() {
-    for (let i = 1; i < 6; i++) {
-      let table: Moviment = {};
-      table.data = i + "/07/2022";
-      table.name = "Nome" + i;
-      table.type = "Tipo" + i;
-      table.value = i;
-      this.tables.push(table)
-    }
+  GetMoviment(){
+    let newMoviment: Moviment = {
+      date: '11/07/2022',
+      name: 'Padaria do seu zé',
+      type: 'Saída',
+      value: 12,
+      account:{
+      name: 'Caixa',
+      type: 'corrente',
+      },
+    };
+    let twoMoviment: Moviment = {
+      date: '11/07/2022',
+      name: 'Mercadinho',
+      type: 'Saída',
+      value: 100,
+      account:{
+      name: 'Caixa',
+      type: 'corrente',
+      },
+    };
+    this.moviments.push(newMoviment)
+    this.moviments.push(twoMoviment)
+    console.log(this.moviments)
   }
 }
