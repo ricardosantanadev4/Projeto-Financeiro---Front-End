@@ -12,14 +12,14 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-// import { AccountComponent } from './pages/account/account.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    // AccountComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserAnimationsModule,
