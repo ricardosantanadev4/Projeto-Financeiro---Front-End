@@ -13,8 +13,8 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-// import { AccountListComponent } from './components/account/account-list/account-list.component';
-// import { AccountFormComponent } from './components/account/account-form/account-form.component';
+// import { AccountDetailsComponent } from './pages/account-details/account-details.component';
+
 
 
 @NgModule({
@@ -22,8 +22,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     AppComponent,
     AdminLayoutComponent,
     NotfoundComponent,
-    // AccountListComponent,
-    // AccountFormComponent,
+    // AccountDetailsComponent,
   ],
   imports: [
     BrowserAnimationsModule,

@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountComponent } from '../../pages/account/account.component';
 import { AccountListComponent } from '../../components/account/account-list/account-list.component';
 import { AccountFormComponent } from '../../components/account/account-form/account-form.component';
+import { AccountDetailsComponent } from '../../pages/account-details/account-details.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { AccountFormComponent } from '../../components/account/account-form/acco
     AccountComponent,
     AccountListComponent,
     AccountFormComponent,
+    AccountDetailsComponent,
   ]
 })
 
