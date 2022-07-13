@@ -16,6 +16,9 @@ import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component'
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountComponent } from '../../pages/account/account.component';
+import { AccountListComponent } from '../../components/account/account-list/account-list.component';
+import { AccountFormComponent } from '../../components/account/account-form/account-form.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -33,6 +36,8 @@ import { AccountComponent } from '../../pages/account/account.component';
     MapsComponent,
     NotificationsComponent,
     AccountComponent,
+    AccountListComponent,
+    AccountFormComponent,
   ]
 })
 

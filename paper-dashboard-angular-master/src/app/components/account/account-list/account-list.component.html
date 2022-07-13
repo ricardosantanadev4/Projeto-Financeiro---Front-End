@@ -1,0 +1,31 @@
+<div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Nome da conta
+                </th>
+                <th>
+                  Tipo de conta
+                </th>
+                <th>
+                  valor
+                </th>
+              </thead>
+              <tbody>
+                <!-- o ngFor vai interar no array accountsFilho -->
+                <tr *ngFor="let obj of accountsFilho">
+                  <td>
+                    {{obj.name}}
+                  </td>
+                  <td>
+                    {{obj.type}}
+                  </td>
+                  <td class="text-right">
+                    {{obj.value}}
+                  </td>
+                </tr>  
+              </tbody>
+            </table>
+          </div>
+        </div>
