@@ -30,7 +30,7 @@
           <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
             <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Ações</button>
             <div ngbDropdownMenu aria-labelledby="dropdownManual">
-              <button ngbDropdownItem>Editar</button>
+              <button ngbDropdownItem (click)="getUpdate(obj.id)">Editar</button>
               <button ngbDropdownItem>Excluir</button>
             </div>
           </div>

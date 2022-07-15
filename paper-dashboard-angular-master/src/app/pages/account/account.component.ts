@@ -18,7 +18,8 @@ export class AccountComponent implements OnInit {
 // gera a primeira linha da tabela e armazena no array accounts
   getAccouts(){
     let account: Account = {
-      name:'caixa',
+      id: 1,
+      name:'AccountComponent',
       type:'popanca',
       value: 1500,
     }

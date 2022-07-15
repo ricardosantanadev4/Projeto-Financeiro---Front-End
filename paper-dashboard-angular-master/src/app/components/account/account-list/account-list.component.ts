@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'app/models/Account';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account-list',
@@ -12,9 +13,11 @@ export class AccountListComponent implements OnInit {
   // recebe os elmentos do array do pai e sava accountsFilho
   accountsFilho: Account[] = [];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  getUpdate(id: number){
+    this.router.navigate(["account-details",{id: id}])
+  }
 }
