@@ -8,8 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AccountDetailsComponent implements OnInit {
   account: Account = {};
+  getAccount: Account = {};
   id = 0;
+
   constructor(private router: Router, private route: ActivatedRoute) {
+    // esta usando o router para pegar o parametro id
     this.id=Number(this.route.snapshot.paramMap.get("id"))|0;
     if(this.id != 0){
       this.getAccounts()
@@ -18,16 +21,18 @@ export class AccountDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   submit() {
     console.log(this.account)
   }
+
   getAccounts(){
-    let account: Account = {
+    let bob: Account = {
       id: 1,
-      name:'AccountDetails',
-      type:'popanca',
+      name:'BB',
+      type:'pupanca',
       value: 1500,
     }
-    this.account = account;
+    this.getAccount = bob;
   }
 }

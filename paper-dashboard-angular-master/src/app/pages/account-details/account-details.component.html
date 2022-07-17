@@ -10,32 +10,26 @@
                         <div class="col-md-5 pr-1">
                             <div class="form-group">
                                 <label>Nome</label>
-                                <input type="text" 
-                                class="form-control" 
-                                placeholder="Nome da Banco" 
-                                name="name" 
-                                id="name"
-                                [(ngModel)]="account.name"/>
+                                <input type="text" class="form-control" placeholder="Nome da Banco" name="name"
+                                    id="name" [(ngModel)]="getAccount.name" />
                             </div>
                         </div>
                         <div class="col-md-3 px-1">
                             <div class="form-group">
                                 <label>Tipo</label>
-                                <select class="form-control" 
-                                        name="select" 
-                                        id="select"
-                                        [(ngModel)]="account.type"
-                                        >
-                                    <option value="Corrente">Corrente</option>
-                                    <option value="Poupanca">Poupança</option>
-                                    <option value="Investimento">Investimento</option>
+                                <select class="form-control" name="select" id="select" [(ngModel)]="getAccount.name">
+                                    <option value="Corrente1">Corrente</option>
+                                    <option value="Poupanca1">Poupanca</option>
+                                    <option value="Investimento1">Investimento</option>
+
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="update ml-auto mr-auto">
-                            <button type="button" (click)="submit()" class="btn btn-primary btn-round">Cadastrar</button>
+                            <button type="button" (click)="submit()"
+                                class="btn btn-primary btn-round">Cadastrar</button>
                         </div>
                     </div>
                 </form>

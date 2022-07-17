@@ -18,9 +18,9 @@ export class AccountComponent implements OnInit {
 // gera a primeira linha da tabela e armazena no array accounts
   getAccouts(){
     let account: Account = {
-      id: 1,
-      name:'AccountComponent',
-      type:'popanca',
+      id: 2,
+      name:'AccountComponet',
+      type:'corrente',
       value: 1500,
     }
     this.accounts.push(account);
