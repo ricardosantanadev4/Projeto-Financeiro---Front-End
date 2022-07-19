@@ -11,17 +11,16 @@
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input type="text" class="form-control" placeholder="Nome da Banco" name="name"
-                                    id="name" [(ngModel)]="getAccount.name" />
+                                    id="name" [(ngModel)]="account.name" />
                             </div>
                         </div>
                         <div class="col-md-3 px-1">
                             <div class="form-group">
                                 <label>Tipo</label>
-                                <select class="form-control" name="select" id="select" [(ngModel)]="getAccount.name">
-                                    <option value="Corrente1">Corrente</option>
-                                    <option value="Poupanca1">Poupanca</option>
-                                    <option value="Investimento1">Investimento</option>
-
+                                <select [(ngModel)]="account.type" class="form-control" name="select" id="select">
+                                    <option value="Corrente">Corrente</option>
+                                    <option value="Poupanca">Poupanca</option>
+                                    <option value="Investimento">Investimento</option>
                                 </select>
                             </div>
                         </div>

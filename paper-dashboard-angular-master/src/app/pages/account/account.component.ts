@@ -7,23 +7,30 @@ import { Account } from 'app/models/Account';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent implements OnInit {
-// array onde vai ser armazenado as/a linha da tabela
+  // array onde vai ser armazenado as/a linha da tabela
   accounts: Account[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-  this.getAccouts();
+    this.getAccouts();
   }
-// gera a primeira linha da tabela e armazena no array accounts
-  getAccouts(){
+  // gera a primeira linha da tabela e armazena no array accounts
+  getAccouts() {
     let account: Account = {
-      id: 2,
-      name:'AccountComponet',
-      type:'corrente',
+      id: 1,
+      name: 'BB',
+      type: 'corrente',
       value: 1500,
     }
+    let account1: Account = {
+      id: 2,
+      name: 'bb2',
+      type: 'bradesco',
+      value: 5000,
+    }
     this.accounts.push(account);
+    this.accounts.push(account1);
     console.log(this.accounts);
   }
 }

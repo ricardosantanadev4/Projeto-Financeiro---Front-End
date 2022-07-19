@@ -13,8 +13,8 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
-// import { AccountDetailsComponent } from './pages/account-details/account-details.component';
 
+import  {  CommonModule  }  from  '@angular/common';
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     AppComponent,
     AdminLayoutComponent,
     NotfoundComponent,
-    // AccountDetailsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
