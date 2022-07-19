@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'app/models/Account';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-account-list',
@@ -13,7 +14,7 @@ export class AccountListComponent implements OnInit {
   // recebe os elmentos do array do pai e sava accountsFilho
   accountsFilho: Account[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -29,5 +30,6 @@ export class AccountListComponent implements OnInit {
     //  splice(index,1) remove o objeto do array que esta no indice passado em index
     this.accountsFilho.splice(index, 1);
     console.log(this.accountsFilho);
+    this.toastr.success("Deletado Com Sucesso!");
   }
 }
